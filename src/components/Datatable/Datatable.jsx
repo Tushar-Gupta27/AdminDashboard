@@ -65,7 +65,10 @@ function Datatable() {
       renderCell: (params) => {
         return (
           <div className="cellAction">
-            <Link to="/users/test" style={{ textDecoration: "none" }}>
+            <Link
+              to="/AdminDashboard/users/test"
+              style={{ textDecoration: "none" }}
+            >
               <div className="viewButton">View</div>
             </Link>
             <div
@@ -83,7 +86,7 @@ function Datatable() {
     <div className="datatable">
       <div className="datatableTitle">
         Add New users
-        <Link to="/users/new">Add New</Link>
+        <Link to="/AdminDashboard/users/new">Add New</Link>
       </div>
       {data.length !== 0 && (
         <DataGrid
