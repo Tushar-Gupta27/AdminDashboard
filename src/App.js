@@ -13,7 +13,7 @@ function App() {
   const { currentUser } = useContext(AuthContext);
   const [dark] = useContext(DarkModeContext);
   const RequireAuth = ({ children }) => {
-    return currentUser ? children : <Navigate to="/login" />;
+    return currentUser ? children : <Navigate to="/AdminDashboard/login" />;
   };
   return (
     <div className={dark ? "app dark" : "app"}>
