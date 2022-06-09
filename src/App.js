@@ -18,7 +18,7 @@ function App() {
   return (
     <div className={dark ? "app dark" : "app"}>
       <Routes>
-        <Route path="/">
+        <Route path="/AdminDashboard">
           <Route
             index
             element={
@@ -55,7 +55,7 @@ function App() {
             />
           </Route>
         </Route>
-        <Route path="/products">
+        <Route path="/AdminDashboard/products">
           <Route
             index
             element={
