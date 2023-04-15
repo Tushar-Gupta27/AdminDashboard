@@ -1,4 +1,4 @@
-# Admin DashBoard
+# [Admin DashBoard](https://tushar-gupta27.github.io/AdminDashboard/)
 
 Dashboard for displaying database data in organized and readable way
 * Represent data in charts form
