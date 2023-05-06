@@ -27,8 +27,8 @@ function App() {
               </RequireAuth>
             }
           />
-          <Route path="login" element={<Login />} />
-          <Route path="users">
+          <Route path="/AdminDashboard/login" element={<Login />} />
+          <Route path="/AdminDashboard/users">
             <Route
               index
               element={
@@ -38,7 +38,7 @@ function App() {
               }
             />
             <Route
-              path=":userId"
+              path="/AdminDashboard/:userId"
               element={
                 <RequireAuth>
                   <Single />
@@ -46,7 +46,7 @@ function App() {
               }
             />
             <Route
-              path="new"
+              path="/AdminDashboard/new"
               element={
                 <RequireAuth>
                   <New inputs={userInputs} title="Add new User" />
@@ -65,7 +65,7 @@ function App() {
             }
           />
           <Route
-            path=":productId"
+            path="/AdminDashboard/:productId"
             element={
               <RequireAuth>
                 <Single />
@@ -73,7 +73,7 @@ function App() {
             }
           />
           <Route
-            path="new"
+            path="/AdminDashboard/new"
             element={
               <RequireAuth>
                 <New inputs={productInputs} title="Add new Product" />

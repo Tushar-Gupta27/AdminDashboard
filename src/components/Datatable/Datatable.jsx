@@ -28,6 +28,9 @@ function Datatable() {
     // getUsers();
 
     // LISTENING TO REALTIME CHANGES IN COLLECTION
+
+    //UNSUB IS A NORMAL VAR THAT SUBSCRIBES TO REAL TIME CHANGES, and ON CLEANUP WE JUST RETURN IT AS A FUNCTION TO UNSUBSCRIBE
+    //SNAPSHOT IS A FUCNTION TAKING MANY ARGS, SOME AS FUNCTIONS
     const unsub = onSnapshot(
       collection(db, "Users"),
       (snapShot) => {
