@@ -13,7 +13,8 @@ function App() {
   const { currentUser } = useContext(AuthContext);
   const [dark] = useContext(DarkModeContext);
   const RequireAuth = ({ children }) => {
-    return currentUser ? children : <Navigate to="/AdminDashboard/login" />;
+    // return currentUser ? children : <Navigate to="/AdminDashboard/login" />;
+    return children;
   };
   return (
     <div className={dark ? "app dark" : "app"}>
@@ -27,8 +28,8 @@ function App() {
               </RequireAuth>
             }
           />
-          <Route path="/AdminDashboard/login" element={<Login />} />
-          <Route path="/AdminDashboard/users">
+          <Route path="login" element={<Login />} />
+          <Route path="users">
             <Route
               index
               element={
@@ -38,7 +39,7 @@ function App() {
               }
             />
             <Route
-              path="/AdminDashboard/:userId"
+              path=":userId"
               element={
                 <RequireAuth>
                   <Single />
@@ -46,7 +47,7 @@ function App() {
               }
             />
             <Route
-              path="/AdminDashboard/new"
+              path="new"
               element={
                 <RequireAuth>
                   <New inputs={userInputs} title="Add new User" />
@@ -65,7 +66,7 @@ function App() {
             }
           />
           <Route
-            path="/AdminDashboard/:productId"
+            path=":productId"
             element={
               <RequireAuth>
                 <Single />
@@ -73,7 +74,7 @@ function App() {
             }
           />
           <Route
-            path="/AdminDashboard/new"
+            path="new"
             element={
               <RequireAuth>
                 <New inputs={productInputs} title="Add new Product" />

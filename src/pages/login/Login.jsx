@@ -19,7 +19,7 @@ function Login() {
         // console.log(user);
         // console.log(auth);
         dispatch({ type: "LOGIN", payload: { ...user, apiKey: "" } });
-        navigate("/", { replace: true });
+        navigate("/AdminDashboard", { replace: true });
       })
       .catch((error) => {
         const errorCode = error.code;
